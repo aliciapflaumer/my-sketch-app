@@ -1,10 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/react/react.js'
-import '../node_modules/react-bootstrap/dist/react-bootstrap.min.js';
-
 import React, { Component } from 'react';
 import './App.css';
-// import P5Wrapper from 'react-p5-wrapper';
+import { Navbar, Nav, NavItem} from 'react-bootstrap';
 
 class App extends Component {
   render() {
@@ -14,10 +10,28 @@ class App extends Component {
           <h1 className="App-title">My Sketch Application</h1>
         </header>
 
+        <Navbar collapseOnSelect>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="#home">Home</a>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav>
+              <NavItem eventKey={1} href="#">
+                Link
+              </NavItem>
+              <NavItem eventKey={2} href="#">
+                Link
+              </NavItem>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+
         <p className="App-intro">
-          React and Processing together
+
         </p>
-        {/* <P5Wrapper sketch={sketch} />*/}
       </div>
     );
   }
