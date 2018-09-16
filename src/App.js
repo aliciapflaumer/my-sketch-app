@@ -44,11 +44,11 @@ class App extends Component {
           <Navbar.Collapse>
             <Nav>
               <NavItem eventKey={1} href="#">
-                Link
+                About
               </NavItem>
-              <NavItem eventKey={2} href="#">
+              {/*}<NavItem eventKey={2} href="#">
                 Link
-              </NavItem>
+              </NavItem>*/}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -62,6 +62,13 @@ class App extends Component {
           height={'80%'}
           sketchProps={{ value: this.state.value}}
         />
+
+      <Navbar fixedBottom>
+            <p>
+              Made by Alicia Pflaumer<br />
+              <a href="https://github.com/aliciapflaumer">Github</a> | <a href="https://www.linkedin.com/in/aliciapflaumer/">LinkedIn</a>
+            </p>
+          </Navbar>
       </div>
     );
   }
