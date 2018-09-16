@@ -42,9 +42,10 @@ I am experimenting with writing my Processing sketch/animation script in the Rea
 
 - Use `npm install bootstrap --save`
 
-- import css and js with these two lines in app.js file:
+- import css and js with these three lines at top of app.js file:
 
   ```
-  import '../node_modules/react-bootstrap/dist/react-bootstrap.min.js';
   import 'bootstrap/dist/css/bootstrap.min.css';
+  import '../node_modules/react/react.js'
+  import '../node_modules/react-bootstrap/dist/react-bootstrap.min.js';
   ```
