@@ -1,6 +1,6 @@
 # My sketch app
 
-I am experimenting with writing my Processing sketch/animation script in the React Javascript library.
+I am experimenting with embedding a Processing/P5.js sketch in the React Javascript library.
 
 # Steps I took to create, build, and deploy:
 
@@ -55,3 +55,12 @@ I am experimenting with writing my Processing sketch/animation script in the Rea
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/<react-version>/react.min.js"></script>
 
 ```
+
+## Fourth, add P5.js sketch to react app
+
+This is tricky and there is not a lot of help out there yet on the Internet.
+
+I found on the Processing.org forum a helpful discussion by Github user [Job Leonard][job-leonard], he created a component that wraps the p5js library. On Github, [here][p5-react].
+
+[job-leonard]: https://forum.processing.org/two/discussion/23761/p5-react-a-react-component-wrapping-p5js-sketches
+[p5-react]: https://github.com/JobLeonard/p5-react

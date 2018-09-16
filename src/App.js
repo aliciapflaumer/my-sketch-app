@@ -1,11 +1,35 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Navbar, Nav, NavItem} from 'react-bootstrap';
+import { Sketch } from './components/sketch';
+
+const sketch = (width, height, props) => {
+  return function (p5) {
+    let value = props.value;
+    p5.setup = () => {
+      p5.strokeWeight(50);
+    }
+
+    p5.draw = () => {
+      p5.fill(value, 16);
+      // p5.noStroke();
+      // p5.rect(0, 0, width, height);
+      p5.stroke((value + 128) % 256);
+      // p5.line(p5.mouseX, p5.mouseY, p5.pmouseX, p5.pmouseY);
+      p5.ellipse(p5.mouseX, p5.mouseY, 50, 50);
+    };
+  }
+};
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: 0 };
+  }
+
   render() {
     return (
-      <div className="container">
+      <div className="container" style={{ width: '100%', height: '100%' }} onClick={() => { this.setState({ value: (this.state.value + 5)%256 }) }}>
         <header className="App-header">
           <h1 className="App-title">My Sketch Application</h1>
         </header>
@@ -32,6 +56,12 @@ class App extends Component {
         <p className="App-intro">
 
         </p>
+        <Sketch
+          sketch={sketch}
+          width={'80%'}
+          height={'80%'}
+          sketchProps={{ value: this.state.value}}
+        />
       </div>
     );
   }
