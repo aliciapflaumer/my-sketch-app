@@ -42,10 +42,16 @@ I am experimenting with writing my Processing sketch/animation script in the Rea
 
 - Use `npm install bootstrap --save`
 
-- import css and js with these three lines at top of app.js file:
+- Add CDN css and js links to public/index.html file:
 
-  ```
-  import 'bootstrap/dist/css/bootstrap.min.css';
-  import '../node_modules/react/react.js'
-  import '../node_modules/react-bootstrap/dist/react-bootstrap.min.js';
-  ```
+```
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- react-bootstrap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/<react-version>/react.min.js"></script>
+
+```
