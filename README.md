@@ -15,11 +15,15 @@ I am experimenting with writing my Processing sketch/animation script in the Rea
 - Use `npm install gh-pages --save-dev`
 
 **Add some properties to `package.json`**
+
 *After creating a new git repository*
 
 - At the top level, add a home page property.
+
     `"homepage": "http://yourgitname.github.io/name-of-repo"`
+
 - In the scripts property, add a `preploy` and `deploy` property.
+
     ```
       "scripts": {
       //...
@@ -27,5 +31,20 @@ I am experimenting with writing my Processing sketch/animation script in the Rea
       "deploy": "gh-pages -d build"
       }
     ```
+
 - To generate a production build of application:
+
     run `npm run deploy`
+
+## Third, add bootstrap and required dependencies
+
+- Use `npm install --save react-bootstrap`
+
+- Use `npm install bootstrap --save`
+
+- import css and js with these two lines in app.js file:
+
+  ```
+  import '../node_modules/react-bootstrap/dist/react-bootstrap.min.js';
+  import 'bootstrap/dist/css/bootstrap.min.css';
+  ```
