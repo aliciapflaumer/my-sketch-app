@@ -4,15 +4,19 @@
   "private": true,
   "homepage": "https://aliciapflaumer.github.io/my-sketch-app",
   "dependencies": {
-    "ajv": "^6.5.3",
+    "ajv": "^6.9.2",
+    "braces": "^2.3.2",
     "jquery": "^3.3.1",
+    "merge": "^1.2.1",
     "mobile-detect": "^1.4.3",
-    "p5": "^0.7.2",
-    "popper.js": "^1.14.4",
-    "react": "^16.0.0-alpha.6",
+    "p5": "^0.7.3",
+    "popper.js": "^1.14.7",
+    "react": "^16.8.3",
     "react-bootstrap": "^0.32.4",
-    "react-dom": "^16.5.1",
-    "react-scripts": "1.1.5"
+    "react-dom": "^16.8.3",
+    "react-scripts": "^2.1.5",
+    "typescript": "^3.3.3333",
+    "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
